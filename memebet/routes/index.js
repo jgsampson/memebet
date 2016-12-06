@@ -113,7 +113,11 @@ router.get('/poll/data', function(req, res, next) { // create random users and m
 				}
 			});
 		}
-		res.render('dataMemes', {memeData: memeData});
+
+		setTimeout(function() {
+			res.render('dataMemes', {memeData: memeData});
+		}, 5000);
+		
 	});
 });
 
